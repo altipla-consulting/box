@@ -13,6 +13,25 @@ go get github.com/altipla-consulting/box
 ```
 
 
+### Usage
+
+```go
+package main
+
+import (
+	"github.com/altipla-consulting/box"
+	"github.com/logrusorgru/aurora"
+)
+
+func main() {
+	var o box.Box
+	o.AddLine("foo", "bar")
+	o.AddLine("before", aurora.Red("colored"), "after")
+	o.Render()
+}
+```
+
+
 ## Contributing
 
 You can make pull requests or create issues in GitHub. Any code you send should be formatted using `make gofmt`.
